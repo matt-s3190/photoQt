@@ -4,26 +4,28 @@ from PyQt5 import QtCore
 import sys
 import sqlite3
 
+
 # Problems:
-# No delete function to delete tasks
-# When adding a new task, I don't even have to click save changes, fix it to where I have to click the save changes button after adding new task.
+# When you load up UI, current day tasks don't get loaded
+# When adding a new task, I don't even have to click save changes, fix it to where I have
+# to click the save changes button after adding new task.
+# Features:
+# - Add a dark/light mode toggle button. Create color schemes of both versions.
 class MainUI(QWidget):
     def __init__(self):
         super(MainUI, self).__init__()
         loadUi('main.ui', self)
+        self.setWindowTitle("Daily Tasks App")
         # When the date selection has been changed, connect to the function.
         # similar with button "self.button_name.clicked.connect(func). (Signal -> Slot)
         self.calendarWidget.selectionChanged.connect(self.calenderDateChanged)
         self.savebutton.clicked.connect(self.save_Changes)
         self.addButton.clicked.connect(self.addNewTask)
-
+        self.deleteButton.clicked.connect(self.deleteTask)
 
     def calenderDateChanged(self):
-        print("The calender date was changed")
         dateSelected = self.calendarWidget.selectedDate().toPyDate()
-        print(f"Date selected: {dateSelected}")
         self.updateTaskList(dateSelected)
-
 
     # Retrieving data from DB and updating to list widget
     def updateTaskList(self, date):
@@ -37,21 +39,21 @@ class MainUI(QWidget):
         tasks = cursor.fetchall()
         for task in tasks:
             item = QListWidgetItem(str(task[0]))  # Convert task to a list item
-            item.setFlags(item.flags() | QtCore.Qt.ItemIsUserCheckable) # "|": Union Symbol
+            item.setFlags(item.flags() | QtCore.Qt.ItemIsUserCheckable)  # "|": Union Symbol
             item.setCheckState(QtCore.Qt.Unchecked)
             if task[1] == "YES":
                 item.setCheckState(QtCore.Qt.Checked)
             elif task[1] == "NO":
                 item.setCheckState(QtCore.Qt.Unchecked)
             self.taskListWidget.addItem(item)
-
+        db.close()
 
     def save_Changes(self):
         db = sqlite3.connect("data.db")
         cursor = db.cursor()
         date = self.calendarWidget.selectedDate().toPyDate()
 
-        # Updates each item in list widget (Completion only)
+        # Updates each item in list widget (Updates completion only)
         for i in range(self.taskListWidget.count()):
             item = self.taskListWidget.item(i)
             task = item.text()
@@ -67,7 +69,7 @@ class MainUI(QWidget):
         message_box.setText("Changes saved.")
         message_box.setStandardButtons(QMessageBox.Ok)
         message_box.exec_()
-
+        db.close()
 
     def addNewTask(self):
         db = sqlite3.connect("data.db")
@@ -91,6 +93,24 @@ class MainUI(QWidget):
 
         self.updateTaskList(date)
         self.taskLineEdit.clear()
+        db.close()
+
+    def deleteTask(self):
+        db = sqlite3.connect('data.db')
+        cursor = db.cursor()
+
+        task = self.taskListWidget.currentItem().text()
+        date = self.calendarWidget.selectedDate().toPyDate()
+
+        query = "DELETE from data WHERE task = ? AND date = ?"
+        row = (task, str(date),)
+
+        cursor.execute(query, row)
+        db.commit()
+        print("Task deleted")
+
+        self.updateTaskList(date)
+        db.close()
 
 
 if __name__ == "__main__":
