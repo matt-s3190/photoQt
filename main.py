@@ -4,7 +4,6 @@ from PyQt5 import QtCore
 import sys
 import sqlite3
 
-
 # Problems:
 # When you load up UI, current day tasks don't get loaded
 # When adding a new task, I don't even have to click save changes, fix it to where I have
@@ -99,6 +98,8 @@ class MainUI(QWidget):
         db = sqlite3.connect('data.db')
         cursor = db.cursor()
 
+        if self.taskListWidget.currentItem() is None:
+            return
         task = self.taskListWidget.currentItem().text()
         date = self.calendarWidget.selectedDate().toPyDate()
 
