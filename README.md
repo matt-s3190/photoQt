@@ -1,1 +1,0 @@
-# daily_calendar_app
