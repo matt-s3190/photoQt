@@ -1,5 +1,5 @@
 # Project Title: PhotoQT
-A simple photo-editing GUI (Guided User Interface) made in Python using PyQt5 and PIL (Python Imaging Library). 
+A simple photo-editing GUI (Graphical User Interface) made in Python using PyQt5 and PIL (Python Imaging Library). 
 
 # Project Overview
 This application allows users to import images with these extensions (.jpg, .jpeg, .png, and .svg) and customize them through event-driven controls such as buttons and drop-down menus. These transformations include mirroring, rotating, blurring, and manipulation of the image's contrast, saturation, tone and texture. These changes are all fully adjustable by the user. When a change gets applied to the image, the edited image is updated in real time for immediate preview. \
@@ -17,16 +17,15 @@ All required dependencies are listed in the `requirements.txt` file.
 
 
 # Challenges I've faced
-This was my first time experiementing with an image processing library (PIL) and it was a strenous process to decide what classes and functions are needed for my certain build. I got to explore Pillow's offical documentation, break apart and piece together a foundational knowledge about  the library all together.
-When testing out certain transformations, specifically the "rotate" features, on images that have a high resoultion size (>=1280×720), there is a ramp-up delay in previewing the images.
+This project marked my first experience working with an image processing library, specifically Pillow (PIL). One of the main challenges was determining which classes and functions were necessary for the scope of this application. To address this, I spent significant time exploring Pillow’s official documentation and breaking down its functionality to build a solid foundational understanding of the library.
+
+Another challenge arose when applying certain transformations, particularly image rotation, to high-resolution images (≥1280×720). In these cases, there is a noticeable ramp-up delay when these edits get previewed in real time. This highlighted performance considerations when working with real-time image manipulation on larger image sizes.
 
 
 # What I've learned
-Things that I learned:
-Composition of Classes (Editor Instance within Widget Class)
-os Methods
-Incorporation of the PIL Library
-Using Lambda functions as values in key
+- I got to understand more about how to incorporate composition of classes into my project. It helped separate the logic of UI and photo editing features, maintaining readability. 
+Useeful functions from the PIL library
+
 
 Screenshots
 
