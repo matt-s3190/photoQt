@@ -34,12 +34,10 @@ class Widget(QWidget):
         self.editor = Editor(self) 
 
 
-        # Combo Box
         items = ["Original","Left", "Right", "Mirror","Sharpen", "B/W", "Color", "Contrast", "Blur"]
         self.filter_box = QComboBox()
         self.filter_box.addItems(items)
 
-        # Events
         self.btn_folder.clicked.connect(self.getWorkDirectory)
         self.file_list.currentRowChanged.connect(self.displayImage)
 
@@ -72,7 +70,6 @@ class Widget(QWidget):
         global working_directory
         working_directory = QFileDialog.getExistingDirectory(caption="Choose a folder")
 
-        # If user chooses to exit out of FileDialog
         if not working_directory:
             return
 
