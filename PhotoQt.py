@@ -6,11 +6,6 @@ from PIL import Image, ImageEnhance, ImageFilter
 import sys
 import os
 
-# Things that I learned:
-# Composition of Classes (Editor Instance within Widget Class)
-# os Methods
-# Incorporation of the PIL Library
-# Using Lambda functions as values in key
 
 working_directory = ""
 class Widget(QWidget):
@@ -35,7 +30,8 @@ class Widget(QWidget):
 
         self.file_list = QListWidget()
 
-        self.editor = Editor(self) # Composition of classes using ONE widget instance
+        # Composition of classes using ONE widget instance
+        self.editor = Editor(self) 
 
 
         # Combo Box
@@ -117,7 +113,7 @@ class Widget(QWidget):
 
         col2.addWidget(self.picture_box)
 
-        master_layout.addLayout(col1, 20) # Second Argument is Stretch, percentage of how much it takes up the window.
+        master_layout.addLayout(col1, 20) 
         master_layout.addLayout(col2, 80)
 
         self.setLayout(master_layout)
@@ -125,7 +121,9 @@ class Widget(QWidget):
 
 class Editor:
     def __init__(self, widget):
-        self.widget = widget # Stores reference to UI
+        # Stores reference to UI upon initialization
+        self.widget = widget 
+      
         self.image = None
         self.original = None
         self.filename = None
@@ -134,7 +132,7 @@ class Editor:
     def load_image(self, filename):
         self.filename = filename
         fullname = os.path.join(working_directory, self.filename)
-        self.image = Image.open(fullname) # Image attribute becomes a image object
+        self.image = Image.open(fullname) 
         self.original = self.image.copy()
 
 
@@ -144,7 +142,7 @@ class Editor:
         if not os.path.isdir(path):
             os.mkdir(path)
 
-        fullname = os.path.join(path, self.filename) # Adding filename to edits/ directory
+        fullname = os.path.join(path, self.filename)
         self.image.save(fullname)
 
     def show_image(self, path):
