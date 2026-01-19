@@ -17,15 +17,15 @@ All required dependencies are listed in the `requirements.txt` file.
 
 
 # Challenges I've faced
-This project marked my first experience working with an image processing library, specifically Pillow (PIL). One of the main challenges was determining which classes and functions were necessary for the scope of this application. To address this, I spent significant time exploring Pillow’s official documentation and breaking down its functionality to build a solid foundational understanding of the library.
+This project marked my first experience working with an image processing library Pillow (PIL) and with that brought new challenges. One of them being classifying which classes and functions were necessary for the scope of this application. To address this, I spent significant time exploring Pillow’s official documentation and breaking down its functionality to build a solid foundational understanding of the library.
 
 Another challenge arose when applying certain transformations, particularly image rotation, to high-resolution images (≥1280×720). In these cases, there is a noticeable ramp-up delay when these edits get previewed in real time. This highlighted performance considerations when working with real-time image manipulation on larger image sizes.
 
 
 # What I've learned
-- I got to understand more about how to incorporate composition of classes into my project. It helped separate the logic of UI and photo editing features, maintaining readability. 
-- 
-
+- Understanding how to incorporate composition of classes into my project. It helped separate the logic of the UI and photo-editing features, maintaining readability
+- This project also helped me fill in gaps of knowledge I had about OOP (Object-Oriented-Programming) as I got more practice. 
+- Reading the official documentation of a library helped me visualize its structure and debug certain parts of my program.
 
 Screenshots
 
@@ -37,7 +37,7 @@ After Editing
 <img src="/images/edited-screenshot.png" alt="After editing" width="400">
 
 How to Install and Run the Project
-- downalod `requirement.txt
+- download dependencies from `requirements.txt`
 
 References
 
