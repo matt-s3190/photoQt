@@ -27,7 +27,7 @@ Another challenge arose when applying certain transformations, particularly imag
 - This project also helped me fill in gaps of knowledge I had about OOP (Object-Oriented-Programming) as I got more practice. 
 - Reading the official documentation of a library helped me visualize its structure and debug certain parts of my program.
 
-Screenshots
+# Screenshots
 
 Startup Menu
 <img src="/images/startup-screenshot.png" alt="Startup Screen" width="400">
