@@ -32,19 +32,45 @@ Another challenge arose when applying certain transformations, particularly imag
 ## Startup Menu 
 
 <img src="/images/startup-screenshot.png" alt="Startup Screen" width="400">\
-\
 ## Before editing 
 
 <img src="/images/before-edited-screenshot.png" alt="Before editing" width="400">\
-\
 ## After Editing 
 
 <img src="/images/edited-screenshot.png" alt="After editing" width="400">\
-\
-How to Install and Run the Project
-- download dependencies from `requirements.txt`
 
-References
+# How to Install and Run the Project
+
+Follow these steps to get the PhotoQT application up and running:
+
+## 1. Clone the repository
+First, download or clone the repository to your local machine:
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+## 2. Optional: Set up virtual environment
+It's best to set up use a venv to avoid conflicts with other Python packages:
+```bash
+python -m venv venv
+source venv/bin/activate   # macOS/Linux
+venv\Scripts\activate      # Windows
+```
+
+## 3. Install dependencies
+Install packages from `requirements.txt`
+```bash
+pip install -r requirements.txt
+```
+
+## 4. Run appplication:
+Execute the main Python file to launch the GUI:
+```bash
+python main.py
+```
+
+# References
+Check out 
 
 
 
