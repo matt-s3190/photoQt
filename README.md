@@ -29,15 +29,15 @@ Another challenge arose when applying certain transformations, particularly imag
 
 # Screenshots
 
-## Startup Menu \
+## Startup Menu 
 
 <img src="/images/startup-screenshot.png" alt="Startup Screen" width="400">\
 \
-## Before editing \
+## Before editing 
 
 <img src="/images/before-edited-screenshot.png" alt="Before editing" width="400">\
 \
-## After Editing \
+## After Editing 
 
 <img src="/images/edited-screenshot.png" alt="After editing" width="400">\
 \
