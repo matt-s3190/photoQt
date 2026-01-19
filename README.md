@@ -69,8 +69,9 @@ Execute the main Python file to launch the GUI:
 python main.py
 ```
 
-# References
-Check out 
+## Credits
+This project was developed while following the [Code with Josh Python GUI course](https://www.youtube.com/c/CodeWithJosh), which provided guidance and tutorials on building GUI applications with PyQt5.
+
 
 
 
