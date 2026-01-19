@@ -29,7 +29,9 @@ Useeful functions from the PIL library
 
 Screenshots
 
-![App Screenshot](/images/startup-screenshot.png)
+<img src="/images/startup-screenshot.png" alt="Startup Screen" width="400">
+<img src="/images/before-screenshot.png" alt="Before editing" width="400">
+<img src="/images/edited-screenshot.png" alt="After editing" width="400">
 
 How to Install and Run the Project
 - downalod `requirement.txt
