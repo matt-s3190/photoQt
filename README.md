@@ -24,13 +24,13 @@ Another challenge arose when applying certain transformations, particularly imag
 
 # What I've learned
 - I got to understand more about how to incorporate composition of classes into my project. It helped separate the logic of UI and photo editing features, maintaining readability. 
-Useeful functions from the PIL library
+- 
 
 
 Screenshots
 
 <img src="/images/startup-screenshot.png" alt="Startup Screen" width="400">
-<img src="/images/before-screenshot.png" alt="Before editing" width="400">
+<img src="/images/before-edited-screenshot.png" alt="Before editing" width="400">
 <img src="/images/edited-screenshot.png" alt="After editing" width="400">
 
 How to Install and Run the Project
