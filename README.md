@@ -47,7 +47,7 @@ Follow these steps to get the PhotoQT application up and running:
 First, download or clone the repository to your local machine:
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+cd photoQt
 ```
 ## 2. Optional: Set up virtual environment
 It's best to set up use a venv to avoid conflicts with other Python packages:
