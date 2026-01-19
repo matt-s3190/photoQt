@@ -70,8 +70,7 @@ python main.py
 ```
 
 ## Credits
-This project was developed while following the [Code with Josh Python GUI course](https://www.youtube.com/c/CodeWithJosh), which provided guidance and tutorials on building GUI applications with PyQt5.
-
+This project was developed while following the [Code with Josh Python GUI course](https://www.youtube.com/@codewithjoshoffical), which provided guidance and tutorials on building GUI applications with PyQt5.
 
 
 
