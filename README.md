@@ -29,7 +29,7 @@ Useeful functions from the PIL library
 
 Screenshots
 
-![App Screenshot](/images/startup-screenshot)
+![App Screenshot](/images/startup-screenshot.png)
 
 How to Install and Run the Project
 - downalod `requirement.txt
