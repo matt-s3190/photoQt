@@ -70,7 +70,7 @@ python main.py
 ```
 
 ## Credits
-This project was inspired while following the [Code with Josh Python GUI course](https://www.youtube.com/@codewithjoshoffical), which provided guidance and tutorials on building GUI applications with PyQt5.
+This project was inspired while following the [Code with Josh Python GUI course](https://www.youtube.com/@codewithjoshoffical), which provided guidance and insight on building GUI applications with PyQt5.
 
 
 
