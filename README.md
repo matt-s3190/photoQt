@@ -17,7 +17,7 @@ All required dependencies are listed in the `requirements.txt` file.
 
 
 # Challenges I've faced
-This project marked my first experience working with an image processing library Pillow (PIL) and with that brought new challenges. One of them being classifying which classes and functions were necessary for the scope of this application. To address this, I spent significant time exploring Pillow’s official documentation and breaking down its functionality to build a solid foundational understanding of the library.
+This project marks my first experience working with an image processing library like Pillow, and with that brought a handful of challenges. One struggle I faced was understanding how to integrate PIL and PyQt5 together and manage to work seamlessly. To address this, I spent significant time exploring Pillow’s official documentation and breaking down its functionality to build a solid foundational understanding of the library before drawing my initial sketch for this project
 
 Another challenge arose when applying certain transformations, particularly image rotation, to high-resolution images (≥1280×720). In these cases, there is a noticeable ramp-up delay when these edits get previewed in real time. This highlighted performance considerations when working with real-time image manipulation on larger image sizes.
 
@@ -70,7 +70,7 @@ python main.py
 ```
 
 ## Credits
-This project was developed while following the [Code with Josh Python GUI course](https://www.youtube.com/@codewithjoshoffical), which provided guidance and tutorials on building GUI applications with PyQt5.
+This project was inspired while following the [Code with Josh Python GUI course](https://www.youtube.com/@codewithjoshoffical), which provided guidance and tutorials on building GUI applications with PyQt5.
 
 
 
